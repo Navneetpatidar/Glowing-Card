@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0C0C0C;
+    padding-top: 50px;
+}
+.card{
+    background: #F8F6E3;
+    width: 250px;
+    height: 500px;
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5rem;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.4s;
+    background-image: url('a1.jpg');
+    background-size: cover;
+
+}
+.card:hover{
+    background-image: url('a2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #DCFFB7;
+    transition: color 1s;
+    transition: 0.4s ease-in-out;
+}
+.card {
+    position: relative;
+    animation: lighting 2s linear infinite;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+    opacity: 0.7;
+    animation: colorChange 4s linear infinite;
+}
+
+@keyframes lighting {
+    0% {
+        box-shadow: 0 0 10px 10px #E5F9DB;
+    }
+    50% {
+        box-shadow: 0 0 50px 50px #408E91;
+    }
+    100% {
+        box-shadow: 0 0 100px 100px #D25380;
+    }
+}
